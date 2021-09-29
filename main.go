@@ -1,8 +1,8 @@
 package main
 
 import (
-	"go-authentication-boilerplate/database"
-	"go-authentication-boilerplate/router"
+	"github.com/IliyaKirilov/fiberVue/database"
+	"github.com/IliyaKirilov/fiberVue/router"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"

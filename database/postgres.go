@@ -2,7 +2,7 @@ package database
 
 import (
 	"fmt"
-	"go-authentication-boilerplate/models"
+	//"go-authentication-boilerplate/models"
 	"log"
 	"os"
 
