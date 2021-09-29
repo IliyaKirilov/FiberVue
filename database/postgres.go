@@ -26,18 +26,17 @@ func ConnectToDB() {
 	dbName := os.Getenv("DB_NAME")
 
 	dsn := fmt.Sprintf("host=localhost user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Asia/Kolkata",
-	uname, pass, dbName, port)
-	
+		uname, pass, dbName, port)
 
+	log.Print("Connecting to PostgreSQL DB...")
 	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{
-		Logger: logger.Default.LogMode(logger.info),
+		Logger: logger.Default.LogMode(logger.Info),
 	})
 
-	if err = nil {
-		log.Fatal("Failed to connect to PostgresSQL. \n", err)
+	if err != nil {
+		log.Fatal("Failed to connect to database. \n", err)
 		os.Exit(2)
-	}
-	
 
+	}
 	fmt.Println("Connected to DB")
 }

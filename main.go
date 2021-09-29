@@ -1,8 +1,10 @@
 package main
 
 import (
-	"github.com/IliyaKirilov/fiberVue/database"
-	"github.com/IliyaKirilov/fiberVue/router"
+	"fmt"
+
+	"github.com/IliyaKirilov/FiberVue/database"
+	"github.com/IliyaKirilov/FiberVue/router"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -21,7 +23,7 @@ func main() {
 	app := CreateInstance()
 
 	app.Use(cors.New())
-
+	fmt.Println("stiga do tuk")
 	router.SetupRoutes(app)
 
 	app.Listen(":3000")

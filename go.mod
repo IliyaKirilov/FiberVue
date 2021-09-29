@@ -1,4 +1,4 @@
-module fiberVue
+module github.com/IliyaKirilov/FiberVue
 
 go 1.16
 
